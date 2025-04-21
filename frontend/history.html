@@ -1,0 +1,78 @@
+<!-- history.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance History | Student Attendance System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Attendance History</h1>
+        <div id="userInfo">
+            <span id="welcomeMessage">Welcome, </span>
+            <button id="logoutBtn">Logout</button>
+        </div>
+    </header>
+    
+    <main>
+        <section class="history-section">
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label for="startDate">Start Date:</label>
+                    <input type="date" id="startDate">
+                </div>
+                
+                <div class="filter-group">
+                    <label for="endDate">End Date:</label>
+                    <input type="date" id="endDate">
+                </div>
+                
+                <div class="filter-group">
+                    <label for="statusFilter">Status:</label>
+                    <select id="statusFilter">
+                        <option value="all">All</option>
+                        <option value="completed">Completed</option>
+                        <option value="checkedIn">Checked In Only</option>
+                        <option value="absent">Absent</option>
+                    </select>
+                </div>
+                
+                <button id="applyFilters" class="primary-btn">Apply Filters</button>
+            </div>
+            
+            <div class="history-container">
+                <div id="attendanceHistory">
+                    <p>Loading attendance history...</p>
+                </div>
+            </div>
+            
+            <div class="attendance-stats">
+                <h3>Attendance Statistics</h3>
+                <div id="statsContainer">
+                    <div class="stat-card">
+                        <h4>Total Days</h4>
+                        <p id="totalDays">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Present Days</h4>
+                        <p id="presentDays">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Attendance Rate</h4>
+                        <p id="attendanceRate">0%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="action-buttons">
+            <button id="exportBtn" class="secondary-btn">Export to CSV</button>
+            <a href="attendance.html" class="secondary-btn">Back to Attendance</a>
+        </div>
+    </main>
+    
+    <script src="history.js"></script>
+</body>
+</html>

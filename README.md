@@ -18,18 +18,6 @@
 4. 组员4：通知系统 🔄 进行中
 5. 组员5：数据库集成 ✅ 已完成
 
-## 快速开始
-1. 克隆仓库：`git clone https://github.com/aday-coding/econ7085.git`
-2. 安装依赖：`cd econ7085/frontend && npm install`
-3. 运行前端：`npm start`
-4. 访问：`http://localhost:3000`
-
-## 文档导航
-- [系统架构文档](./docs/architecture.md)
-- [API接口规范](./docs/api-specs.md)
-- [数据模型文档](./docs/data-models.md)
-- [部署指南](./docs/deployment-guide.md)
-
 ## 阿里云资源
 - ECS实例：用于部署Web应用
 - RDS MySQL：存储考勤数据

@@ -1,0 +1,53 @@
+<!-- attendance.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Student Attendance System</h1>
+        <div id="userInfo">
+            <span id="welcomeMessage">Welcome, </span>
+            <button id="logoutBtn">Logout</button>
+        </div>
+    </header>
+    
+    <main>
+        <section class="attendance-section">
+            <h2>Today's Attendance</h2>
+            <div class="attendance-card">
+                <div class="current-time">
+                    <h3>Current Time:</h3>
+                    <div id="clock">00:00:00</div>
+                    <div id="date">Date: 00/00/0000</div>
+                </div>
+                
+                <div class="attendance-actions">
+                    <button id="checkInBtn" class="action-btn">Check In</button>
+                    <button id="checkOutBtn" class="action-btn">Check Out</button>
+                </div>
+                
+                <div class="attendance-status">
+                    <p>Status: <span id="status">Not checked in</span></p>
+                    <p>Check-in time: <span id="checkInTime">--:--</span></p>
+                    <p>Check-out time: <span id="checkOutTime">--:--</span></p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="quick-history">
+            <h2>Recent Attendance</h2>
+            <div id="recentAttendance">
+                <p>Loading recent attendance...</p>
+            </div>
+            <a href="history.html" class="view-all-btn">View All History</a>
+        </section>
+    </main>
+    
+    <script src="attendance.js"></script>
+</body>
+</html>

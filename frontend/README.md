@@ -1,30 +1,30 @@
-# 前端模块 - 用户签到签退界面
+# 前端模块 - 学生考勤系统
 
-## 功能概述
-- 用户登录界面
+## 已完成功能
+- 用户登录/注册界面
 - 学生签到/签退功能
 - 考勤历史查询
-- 响应式设计，支持桌面和移动设备
+- 基于OSS的用户数据集成
 
 ## 文件结构
 - `index.html` - 登录页面
 - `register.html` - 注册页面
-- `attendance.html` - 签到签退页面
+- `attendance.html` - 考勤签到/签退页面
 - `history.html` - 考勤历史查询页面
-- `login.js` - 登录功能脚本
-- `register.js` - 注册功能脚本
-- `attendance.js` - 签到签退功能脚本
-- `history.js` - 历史查询功能脚本
-- `styles.css` - 样式表
+- `login.js` - 登录功能逻辑
+- `register.js` - 注册功能逻辑
+- `attendance.js` - 考勤功能逻辑
+- `history.js` - 历史查询逻辑
+- `styles.css` - 全局样式表
 
-## 数据存储
-当前实现使用本地存储（localStorage）临时保存考勤记录，等待组员2实现云端存储功能。
+## 当前实现
+前端目前使用本地存储(localStorage)模拟数据持久化，登录验证通过读取OSS中的用户数据文件实现。需要后端开发者实现真正的数据持久化和API接口。
 
-## 用户认证
-- 系统使用OSS中的CSV文件进行用户验证
-- 用户可以使用学号和电话号码后8位登录
-- 也支持本地注册的新用户
+## 集成点
+- 登录验证: `login.js` 中的 `validateLogin` 函数
+- 考勤记录存储: `attendance.js` 中的 `handleCheckIn` 和 `handleCheckOut` 函数
+- 历史记录查询: `history.js` 中的 `loadAttendanceHistory` 函数
 
-## 部署说明
-前端代码已部署在阿里云ECS实例上，使用Apache HTTP服务器提供服务。
+## 后续交接
+参考交接文档
 

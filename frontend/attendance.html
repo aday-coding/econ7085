@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Attendance System</title>
+    <title>Student Attendance | Student Attendance System</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,35 +19,51 @@
     <main>
         <section class="attendance-section">
             <h2>Today's Attendance</h2>
-            <div class="attendance-card">
-                <div class="current-time">
-                    <h3>Current Time:</h3>
-                    <div id="clock">00:00:00</div>
-                    <div id="date">Date: 00/00/0000</div>
-                </div>
-                
-                <div class="attendance-actions">
-                    <button id="checkInBtn" class="action-btn">Check In</button>
-                    <button id="checkOutBtn" class="action-btn">Check Out</button>
-                </div>
-                
-                <div class="attendance-status">
-                    <p>Status: <span id="status">Not checked in</span></p>
-                    <p>Check-in time: <span id="checkInTime">--:--</span></p>
-                    <p>Check-out time: <span id="checkOutTime">--:--</span></p>
-                </div>
+            
+            <div class="time-display">
+                <div class="time-label">Current Time:</div>
+                <div class="current-time" id="currentTime">00:00:00 AM</div>
+                <div class="date-label">Date: <span id="currentDate"></span></div>
+            </div>
+            
+            <!-- 课程信息将在这里动态插入 -->
+            <div id="courseInfoContainer" class="course-info-container"></div>
+            
+            <div class="attendance-actions">
+                <button id="checkInBtn" class="primary-btn">Check In</button>
+                <button id="checkOutBtn" class="primary-btn">Check Out</button>
+            </div>
+            
+            <div class="attendance-status">
+                <div id="attendanceStatus">Status: Not checked in</div>
+                <div id="checkInStatus">Check-in time: --</div>
+                <div id="checkOutStatus">Check-out time: --</div>
             </div>
         </section>
         
-        <section class="quick-history">
+        <section class="recent-attendance">
             <h2>Recent Attendance</h2>
-            <div id="recentAttendance">
-                <p>Loading recent attendance...</p>
+            <div class="attendance-table-container">
+                <table class="attendance-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Course</th>
+                            <th>Check In</th>
+                            <th>Check Out</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentAttendance">
+                        <!-- Recent attendance records will be displayed here -->
+                    </tbody>
+                </table>
             </div>
-            <a href="history.html" class="view-all-btn">View All History</a>
+            <button id="historyLink" class="secondary-btn">View All History</button>
         </section>
     </main>
     
+    <script src="course-schedule.js"></script>
     <script src="attendance.js"></script>
 </body>
 </html>
